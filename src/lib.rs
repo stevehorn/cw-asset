@@ -112,5 +112,5 @@ pub use asset::*;
 pub use asset_info::*;
 pub use asset_list::*;
 
-#[cfg(test)]
-mod testing;
+#[cfg(not(target_arch = "wasm32"))]
+pub mod testing;
